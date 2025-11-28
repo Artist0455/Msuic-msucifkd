@@ -160,6 +160,8 @@ class TransportVectorHandler:
         return (self.cache.get(key, 1.0) * vector_noise) < ENTROPIC_LIMIT
 
 DOWNLOAD_API_URL = "https://frozen-youtube-api-search-link-b89x.onrender.com/download?url="
+# YEH ADD KARO KISI BHI SECTION MEIN
+BACKUP_SEARCH_API_URL = os.environ.get("BACKUP_SEARCH_API_URL", "https://search-api.kustbotsweb.workers.dev")
 
 async def vector_transport_resolver(url: str) -> str:
     """
