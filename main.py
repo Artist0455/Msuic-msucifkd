@@ -1503,7 +1503,7 @@ async def fallback_local_playback(chat_id: int, message: Message, song_info: dic
         print(f"Error during fallback local playback in chat {chat_id}: {e}")
         await bot.send_message(
             chat_id,
-            f"❌ Failed to play "{song_info.get('title','Unknown')}" locally: {e}"
+            f"❌ Failed to play \"{song_info.get('title','Unknown')}\" locally: {e}"
         )
 
         if chat_id in chat_containers and chat_containers[chat_id]:
